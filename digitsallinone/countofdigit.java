@@ -4,7 +4,7 @@ public class countofdigit {
 
 	public static void main(String[] args) {
 		Scanner s=new Scanner(System.in);
-		System.out.println("ENTER THE NUMBER : ");
+		System.out.print("ENTER THE NUMBER : ");
 		int n=s.nextInt();
 		int count=0;
 		while(n!=0)
