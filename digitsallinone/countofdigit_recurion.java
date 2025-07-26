@@ -12,6 +12,7 @@ public class countofdigit_recurion {
 		Scanner s=new Scanner(System.in);
 		System.out.print("ENTER THE NUMBER : ");
 		int n=s.nextInt();
+		//countofdigit_recurion ob=new countofdigit_recurion();
 		System.out.println("COUNT OF THE "+n+" is :"+count(n,0));
 
 	}
