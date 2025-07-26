@@ -5,7 +5,7 @@ public class factorial_recursion {
 	{
 		if(n==1 || n==0)
 		{
-			return n;
+			return 1;
 		}
 		return n*fact(n-1);
 	}
