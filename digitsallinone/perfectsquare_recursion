@@ -1,0 +1,40 @@
+package digitsallinone;
+import java.util.*;
+
+class PerfectSquare {
+    public static boolean isPerfectRecursive(int n, int low, int high) {
+        if (low > high) {
+            return false;
+        }
+
+        int mid = low + (high - low) / 2;
+        int square = mid * mid;
+
+        if (square == n) {
+            return true;
+        } else if (square < n) {
+            return isPerfectRecursive(n, mid + 1, high);
+        } else {
+            return isPerfectRecursive(n, low, mid - 1);
+        }
+    }
+
+    public static boolean isPerfect(int n) {
+        if (n < 0) return false;
+        return isPerfectRecursive(n, 1, n);
+    }
+
+    public static void main(String ar[]) {
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter THE NUMBER : ");
+        int n = s.nextInt();
+
+        if (isPerfect(n)) {
+            System.out.println("THE GIVEN NUMBER IS A PERFECT SQUARE");
+        } else {
+            System.out.println("THE GIVEN NUMBER IS NOT A PERFECT SQUARE");
+        }
+
+        s.close();
+    }
+}
